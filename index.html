@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddles Key Rings & Things</title>
+
+<style>
+body {
+margin: 0;
+background: #ffffff;
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+padding: 20px;
+}
+
+img {
+max-width: 90%;
+max-height: 300px;
+margin-bottom: 20px;
+}
+
+.buttons {
+width: 100%;
+max-width: 360px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin-bottom: 25px;
+}
+
+.btn {
+text-decoration: none;
+padding: 14px;
+border-radius: 6px;
+font-size: 16px;
+font-weight: bold;
+color: white;
+text-align: center;
+}
+
+.call { background: #28a745; }
+.facebook { background: #1877F2; }
+.tiktok {
+background: #000;
+border: 1px solid #000;
+}
+.custom { background: #6f42c1; }
+
+form {
+width: 100%;
+max-width: 360px;
+display: none;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+input, textarea {
+padding: 10px;
+font-size: 15px;
+border-radius: 4px;
+border: 1px solid #ccc;
+width: 100%;
+}
+
+textarea {
+resize: vertical;
+min-height: 100px;
+}
+
+.submit {
+background: #333;
+color: white;
+border: none;
+padding: 12px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+}
+</style>
+
+<script>
+function toggleForm() {
+const form = document.getElementById("orderForm");
+form.style.display = form.style.display === "flex" ? "none" : "flex";
+}
+</script>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<img src="logo2.jpg" alt="Riddles Key Rings & Things">
+
+<!-- BUTTONS -->
+<div class="buttons">
+
+<a class="btn call" href="tel:6094128005">
+Call Now
+</a>
+
+<a class="btn facebook" href="https://www.facebook.com/jackie.riddle.98" target="_blank">
+Facebook
+</a>
+
+<a class="btn tiktok" href="https://www.tiktok.com/@jackieriddle4" target="_blank">
+TikTok
+</a>
+
+<button class="btn custom" onclick="toggleForm()">
+Custom Orders
+</button>
+
+</div>
+
+<!-- CUSTOM ORDER FORM -->
+<form id="orderForm" action="mailto:YOUREMAIL@example.com" method="post" enctype="text/plain">
+
+<textarea name="Item Description" placeholder="Describe the item you want made..." required></textarea>
+
+<input type="text" name="Phone Number" placeholder="Your phone number" required>
+
+<input type="email" name="Email" placeholder="Your email address" required>
+
+<button class="submit" type="submit">
+Send Request
+</button>
+
+</form>
+
+</body>
+</html>
